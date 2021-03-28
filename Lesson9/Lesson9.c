@@ -51,7 +51,7 @@ void insert(int pr, int data){
 
 	if(items == SIZE){
 		printf("Queue is full\n");
-		return;
+		free(node);
 	}
 	else{
 		arr[tail++] = node;
@@ -86,6 +86,8 @@ void rem(){
 						arr[index] = NULL;
 					}
 				}
+				
+				i--;
 
 				printf("pr= %d, data= %d\n", temp -> pr, temp -> data);
 			}
@@ -129,7 +131,7 @@ void taskOne(){
 
 	insert(8, 123);
 	insert(9, 321);
-	insert(2, 222);
+	insert(9, 222);
 	insert(9, 333);
 	printQueue();
 
