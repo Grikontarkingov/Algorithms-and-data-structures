@@ -79,14 +79,14 @@ void rem(){
 				tail--;
 				items--;
 
-				while(index < SIZE){
+				while(index < SIZE - 1){
 					arr[index] = arr[index + 1];
 					index++;
-					if(index > tail){
+					if(index == tail){
 						arr[index] = NULL;
 					}
 				}
-				
+
 				i--;
 
 				printf("pr= %d, data= %d\n", temp -> pr, temp -> data);
@@ -208,7 +208,7 @@ void taskTwo(){
 	printf("\n");
 }
 
-int main(int argc, char** atgv){
+int main(int argc, char** argv){
 	taskOne();
 	taskTwo();
 
